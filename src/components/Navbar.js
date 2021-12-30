@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       <ul>
-        <li class='logo'>
+        <li className='logo'>
           <img src={Temple} alt='mindful task logo' />
           <span>Mindful Tasks</span>
         </li>
@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link to='/signup'>Signup</Link>
         </li>
         <li>
-          <button class='btn'>Logout</button>
+          <button className='btn'>Logout</button>
         </li>
       </ul>
     </div>

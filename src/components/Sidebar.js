@@ -8,15 +8,15 @@ import AddIcon from "../assets/add_icon.svg";
 export default function Sidebar() {
   return (
     <div className='sidebar'>
-      <div class='sidebar-content'>
-        <div class='user'>
+      <div className='sidebar-content'>
+        <div className='user'>
           {/* avatar and username here late */}
           <p>Hey user</p>
         </div>
-        <nav class='links'>
+        <nav className='links'>
           <ul>
             <li>
-              <NavLink exact to='/'>
+              <NavLink to='/'>
                 <img src={DashboardIcon} alt='dashboard icon' />
                 <span>Dashboard</span>
               </NavLink>
