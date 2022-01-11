@@ -35,6 +35,18 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormError(null);
+
+    if (!category) {
+      setFormError("Please select a project category");
+      return;
+    }
+
+    if (assignedUsers.length < 1) {
+      setFormError("Please sign the project to at least one user");
+      return;
+    }
+
     console.log(name, details, dueDate, category.value, assignedUsers);
   };
 
@@ -85,6 +97,7 @@ export default function Create() {
         </label>
 
         <button className='btn'>Add Project</button>
+        {formError && <p className='error'>{formError}</p>}
       </form>
     </div>
   );
