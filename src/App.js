@@ -25,14 +25,17 @@ function App() {
           <div className='container'>
             <Navbar />
             <Routes>
-              <Route path='/' element={user ? <Dashboard /> : <Login />} />
               <Route path='/create' element={user ? <Create /> : <Login />} />
-              <Route path='/project' element={user ? <Project /> : <Login />} />
+              <Route
+                path='/projects/:id'
+                element={user ? <Project /> : <Login />}
+              />
               <Route path='/Login' element={user ? <Login /> : <Dashboard />} />
               <Route
                 path='/signup'
                 element={!user ? <Signup /> : <Dashboard />}
               />
+              <Route path='/' element={user ? <Dashboard /> : <Login />} />
             </Routes>
           </div>
           {user && <OnlineUsers />}
