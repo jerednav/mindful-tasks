@@ -35,7 +35,7 @@ export default function ProjectComments() {
             value={newComment}
           ></textarea>
         </label>
-        <btton class='btn'>Add Comment</btton>
+        <button className='btn'>Add Comment</button>
       </form>
     </div>
   );
