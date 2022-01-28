@@ -12,7 +12,6 @@ export const useLogout = () => {
     setError(null);
     setIsPending(true);
 
-    // sign the user out
     try {
       //update online status
       const { uid } = projectAuth.currentUser;
@@ -21,6 +20,7 @@ export const useLogout = () => {
         .doc(uid)
         .update({ online: false });
 
+      //sign the user out
       await projectAuth.signOut();
 
       // dispatch logout action
